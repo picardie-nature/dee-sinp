@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2012 rel. 2 sp1 (x64) (http://www.altova.com) by USER USER (MNHN Muséum National) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sinp="http://inpn.mnhn.fr/sinp/" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://inpn.mnhn.fr/sinp/" elementFormDefault="qualified" version="0.9.3">
   <xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <xs:annotation>
@@ -529,7 +528,7 @@ La référence bibliographique doit concerner l'observation même et non uniquem
               <xs:documentation>Nom du taxon cité à l’origine par l’observateur. Celui-ci peut être le nom scientifique reprenant idéalement en plus du nom latin, l’auteur et la date. Cependant, si le nom initialement cité est un nom vernaculaire ou un nom scientifique incomplet alors c’est cette information qui doit être indiquée.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="cdNom" nillable="true">
+          <xs:element name="cdNom" nillable="true" type="xs:integer">
             <xs:annotation>
               <xs:documentation>Code du taxon « cd_nom » de TaxRef référençant au niveau national le taxon. Le niveau ou rang taxinomique de la DEE doit être celui de la DS. Si le Cd_Nom pour le taxon observé existe alors il doit être renseigné.</xs:documentation>
               <xs:appinfo>
@@ -537,7 +536,7 @@ La référence bibliographique doit concerner l'observation même et non uniquem
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:element name="cdRef" nillable="true">
+          <xs:element name="cdRef" nillable="true" type="xs:integer">
             <xs:annotation>
               <xs:documentation>Code du taxon « cd_ref » de TaxRef référençant au niveau national le taxon. Le niveau ou rang taxinomique de la DEE doit être celui de la DS. Si le Cd_Ref pour le taxon observé existe alors il doit être renseigné.</xs:documentation>
               <xs:appinfo>
@@ -545,7 +544,7 @@ La référence bibliographique doit concerner l'observation même et non uniquem
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:element name="observateur">
+          <xs:element name="observateur" minOccurs="1" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation>La ou les personnes ayant réalisées l'observation.</xs:documentation>
             </xs:annotation>
