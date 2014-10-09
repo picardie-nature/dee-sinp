@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:import namespace="http://inpn.mnhn.fr/sinp/" schemaLocation="OccurrenceTaxon.xsd"/>
-<xs:element name="Collection"></xs:element>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2">
+	<xs:import namespace="http://inpn.mnhn.fr/sinp/" schemaLocation="OccurrenceTaxon.xsd"/>
+  	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:element name="Collection" type="gml:FeatureCollectionType">
+	</xs:element>
 </xs:schema>
