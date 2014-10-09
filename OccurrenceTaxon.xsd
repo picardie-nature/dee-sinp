@@ -187,12 +187,12 @@
   <xs:element name="DenombrementType" type="sinp:DenombrementTypeType" substitutionGroup="gml:AbstractObject"/>
   <xs:complexType name="DenombrementTypeType">
     <xs:sequence>
-      <xs:element name="denombrementMin" type="xs:int">
+      <xs:element name="denombrementMin" type="xs:int" nillable="true">
         <xs:annotation>
           <xs:documentation>Nombre minimum d'individus du taxon composant l'observation</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="denombrementMax" type="xs:int">
+      <xs:element name="denombrementMax" type="xs:int" nillable="true">
         <xs:annotation>
           <xs:documentation>Nombre maximum d'individus du taxon composant l'observation</xs:documentation>
         </xs:annotation>
